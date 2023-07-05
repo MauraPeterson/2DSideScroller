@@ -57,7 +57,7 @@ public class PlayerMovement : MonoBehaviour
         }
         else
         {
-            animator.SetBool("running", false);
+            state = MovementState.idle;
         }
 
         if(dirY > .1f)
