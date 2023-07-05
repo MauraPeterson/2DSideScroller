@@ -4,20 +4,28 @@ using UnityEngine;
 
 public class PlayerMovement : MonoBehaviour
 {
-    [SerializeField] float jumpVelocity = 7f;
+    private Rigidbody2D rb;
+
+    [SerializeField] private float jumpVelocity = 7f;
+    [SerializeField] private float runSpeed = 7f;
 
     // Start is called before the first frame update
-    void Start()
+    private void Start()
     {
-        
+        rb = GetComponent<Rigidbody2D>();
     }
 
     // Update is called once per frame
-    void Update()
+    private void Update()
     {
-        if (Input.GetKeyDown("space"))
+        float dirX = Input.GetAxisRaw("Horizontal");
+
+        rb.velocity = new Vector2(dirX * runSpeed, rb.velocity.y);
+
+
+        if (Input.GetButtonDown("Jump"))
         {
-            GetComponent<Rigidbody2D>().velocity = new Vector2(0, jumpVelocity);
+            rb.velocity = new Vector2(rb.velocity.x, jumpVelocity);
         }
     }
 }
