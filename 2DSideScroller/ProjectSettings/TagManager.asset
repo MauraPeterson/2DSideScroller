@@ -5,6 +5,7 @@ TagManager:
   serializedVersion: 2
   tags:
   - Cherry
+  - Trap
   layers:
   - Default
   - TransparentFX
@@ -39,6 +40,9 @@ TagManager:
   - 
   - 
   m_SortingLayers:
+  - name: Animation
+    uniqueID: 1700030285
+    locked: 0
   - name: Background
     uniqueID: 3382958493
     locked: 0
