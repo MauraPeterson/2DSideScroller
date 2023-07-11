@@ -1,4 +1,5 @@
 # 2DSideScroller
 A 2D side-scroller game to learn c# and how to use Unity.
 I am using a CI/CD for unity.
-testing ci #3
+
+run using the 2DSideScroller/Builds/Cherry Rush.exe
